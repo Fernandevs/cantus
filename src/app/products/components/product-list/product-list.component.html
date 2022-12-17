@@ -1,0 +1,11 @@
+<div class="grid">
+  <div class="col-12" *ngFor="let category of categories">
+    <p-carousel [value]="getProductsByCategory(category)"
+                [numVisible]="3"
+                [numScroll]="3"
+                [circular]="false"
+                [responsiveOptions]="responsiveOptions">
+      <app-product [products]="getProductsByCategory(category)"></app-product>
+    </p-carousel>
+  </div>
+</div>
